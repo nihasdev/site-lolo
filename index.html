@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossa História 💕</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  transition: 0.5s;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.dark {
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5f);
+  color: #ff9a9e;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.hero {
+  padding: 80px 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+}
+
+.section {
+  padding: 50px 20px;
+}
+
+.gallery img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.carta {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+}
+
+.carta-conteudo {
+  background:white;
+  color:#ff4e8b;
+  padding:30px;
+  border-radius:20px;
+  max-width:500px;
+}
+
+.hearts span {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: subir 6s linear infinite;
+}
+
+@keyframes subir {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100vh); }
+}
+
+.toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* PROMESSA */
+#promessaTela {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  padding: 20px;
+  background: radial-gradient(circle, #ff4e8b, #000);
+  z-index: 9999;
+}
+
+.frase {
+  opacity: 0;
+  margin: 20px 0;
+  transition: opacity 1.5s ease;
+}
+
+.frase.aparecer {
+  opacity: 1;
+}
+
+.fecharPromessa {
+  margin-top: 30px;
+  font-size: 16px;
+  background: white;
+  color: #ff4e8b;
+}
+</style>
+</head>
+
+<body>
+
+<div class="toggle">
+  <button onclick="modoEscuro()">🌙</button>
+</div>
+
+<div id="login" class="hero">
+  <h1>Site secreto 💖</h1>
+  <p>Digite nossa senha</p>
+  <input type="password" id="senha">
+  <br>
+  <button onclick="verificarSenha()">Entrar</button>
+</div>
+
+<div id="conteudo" style="display:none;">
+
+<section class="hero">
+  <h1>Niniii e Lolooo 💕</h1>
+  <h2 id="contador"></h2>
+  <button onclick="abrirCarta()">Abrir Carta 💌</button>
+</section>
+
+<section class="section">
+  <h2>Nossa História ✨</h2>
+  <p>
+não tinha feito essa parte ainda,o resto do site eu tinha feito ja agora que terminamos eu queria só falar algumas coisas e reelembrar os momentos bons que a gente tinha  como: eu indo pro outback pela primeira vez, todos nossos snaps juntos, aquele drama da estefany e do glerm, todas nossas risadas pateticas quando a gente fazia aquele meme saBOOR ou fazia o dab kkkk quando a gente passou o natal e o ano novo junto não te contei mas meu pedido foi ter vc sempre pra mim, e  quando a gente ficava a noite toda conversando com a minha vó, nossas gameplays de shwarma ou de brawl eu amava tanto e quando a gente falava de sonhos? eu amava TANTO isso saber que a gente tinha a mesma "mente" era muito bom, quando a gente dava presente um pro outro era demais e ver aquela camisa do timao eu fico tão feliz, tem noção que vc me deu o MELHOR presente que eu ja recebi? nossos infinitos roles no shopping vai deixar saudades kkkk oh se vai, lembrar de pistache ou labubu vai lembrar AUTOMATICAMENTE vc a pessoa mais labubuzenta que existe,
+e as nossas piadas ou falas internas? tipo o: apluuuh,ridiculuu, ai ouuu, e outros que nn lembro essas foi as uma das MUITAS coisas que a gente passou, isso foi mais um agradecimento por tudo, MUITO OBRIGADO POR TODOS ESSES MOMENTOS, vc nn tem noção o quanto eu to chorando escrevendo isso, por favor da um abraço gigante no seu pai e na sua mãe (ou abraços quentinhos q nem a gente falava kkkkk) fala pra eles que eu amei muito a compania deles eu amava passar tempo conversando com sua mãe e amava sair e desabafar com seu pai, muito obrigado por ter me mudado para essa pessoa, a gente realmente mudou muito nesses 6 meses , eu nn tenho palavras pra descrever o quanto eu te amei e saber que acabou é muito triste, mas saiba de uma coisa, Se de alguma forma o destino me desse uma segunda chance de repetir esses 6 meses, eu faria tudo de novo.
+  </p>
+</section>
+<p>
+  Eu te amo Lais.
+</p>
+
+<section class="section gallery">
+  <h2>Nossas Fotos 📸</h2>
+  <img src="img/WhatsApp Image 2026-03-04 at 02.04.47 (1).jpeg">
+  <img src="img/WhatsApp Image 2026-03-04 at 02.04.47 (2).jpeg">
+  <img src="img/WhatsApp Image 2026-03-04 at 02.04.47.jpeg">
+  <img src="img/WhatsApp Image 2026-03-04 at 02.09.20 (1).jpeg">
+  <img src="img/WhatsApp Image 2026-03-04 at 02.09.20.jpeg">
+</section>
+
+<section class="section">
+  <h2>Tenho uma pergunta muito importante... 💖</h2>
+  <button onclick="pedido()">Clique aqui</button>
+  <div id="pedido" style="display:none; margin-top:20px;">
+    <h1>Quer Namorar comigo o resto da sua vida? 💍✨</h1>
+    <button onclick="respostaSim()">SIM 💕</button>
+    <button onclick="respostaNao()">Não.</button>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Antes de tudo... 💖</h2>
+  <button onclick="iniciarPromessa()">Ler minha promessa</button>
+</section>
+
+</div>
+
+<div id="promessaTela"></div>
+
+<div class="carta" id="carta">
+  <div class="carta-conteudo">
+    <h2>Para o amor da minha vida 💖</h2>
+    <p>
+Dia 26 de Agosto, encontrei a mulher mais maravilhosa, incrivel, linda, chata e irritante kkkkk, vc que me fez enxergar o mundo de um jeito diferente, sempre acredito em destino, e dessa vez não foi diferente..Imagina se eu não vou para a camargo? imagina se o guilherme não tivesse feito tudo? Acredito que Deus abriu portas para nós, quem diria que um mudaria o outro e fico muito grato por isso, se vc soubesse o quão terapeutico é chorar em seus braços e contar coisas que nunca contei para ninguem, extremamente feliz de te ver nas piores e nas melhores fases! Estou Aqui SEMPRE! Feliz em saber que meus sonhos voltaram, minhas vontades de crescer e de ser alguém disciplinado e correr atras das minhas futuras conquistas voltaram graças a VOCÊ! vc me tem de corpo e alma e eu te devo tudo de corpo e alma, EU TE AMO LAIS!
+    </p>
+    <button onclick="fecharCarta()">Fechar</button>
+  </div>
+</div>
+
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts"></div>
+
+<script>
+  <section class="section">
+<h2>Obrigado por tudo ❤️</h2>
+<p>
+Algumas histórias não duram para sempre,
+mas isso não significa que não foram especiais.
+Obrigado por cada momento que vivemos.
+</p>
+<p style="margin-top:40px; font-style:italic;">
+Com carinho,
+Nini 💙
+</p>
+</section>
+
+
+// SENHA
+function verificarSenha() {
+  const senha = document.getElementById("senha").value;
+  if(senha === "parquedialogo") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("conteudo").style.display = "block";
+    document.getElementById("musica").play().catch(()=>{});
+    atualizarContador();
+    verificarCartas();
+  } else {
+    alert("Senha errada 😢");
+  }
+}
+
+// CONTADOR
+function atualizarContador() {
+  const inicio = new Date("2025-08-26");
+  const hoje = new Date();
+  const diff = hoje - inicio;
+  const dias = Math.floor(diff / (1000*60*60*24));
+  document.getElementById("contador").innerText =
+  "Estamos juntas há " + dias + " dias 💞";
+}
+
+// CARTA
+function abrirCarta() {
+  document.getElementById("carta").style.display = "flex";
+}
+function fecharCarta() {
+  document.getElementById("carta").style.display = "none";
+}
+
+// DARK MODE
+function modoEscuro() {
+  document.body.classList.toggle("dark");
+}
+
+// CORAÇÕES
+function criarCoracao() {
+  const heart = document.createElement("span");
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random()*3+3)+"s";
+  document.querySelector(".hearts").appendChild(heart);
+  setTimeout(()=> heart.remove(),6000);
+}
+setInterval(criarCoracao, 500);
+
+// PEDIDO
+function pedido() {
+  document.getElementById("pedido").style.display = "block";
+}
+function respostaSim() {
+  alert("EU TE AMO PRA SEMPRE, namorados definitivos agora? kkkkkk 💕");
+}
+function respostaNao() {
+  const botaoNao = event.target;
+
+  const larguraTela = window.innerWidth - botaoNao.offsetWidth;
+  const alturaTela = window.innerHeight - botaoNao.offsetHeight;
+
+  const novaPosX = Math.random() * larguraTela;
+  const novaPosY = Math.random() * alturaTela;
+
+  botaoNao.style.position = "fixed";
+  botaoNao.style.left = novaPosX + "px";
+  botaoNao.style.top = novaPosY + "px";
+}
+// CARTAS POR DATA
+const cartas = [
+  { data: "2026-03-10", texto: "Essa é uma carta desbloqueada no dia 10 de março 💖" }
+];
+
+function verificarCartas() {
+  const hoje = new Date();
+  const container = document.getElementById("cartas");
+  container.innerHTML = "";
+
+  cartas.forEach(carta => {
+    const dataCarta = new Date(carta.data);
+    if (hoje >= dataCarta) {
+      const div = document.createElement("div");
+      div.style.background = "#ffe6f0";
+      div.style.color = "#ff4e8b";
+      div.style.padding = "15px";
+      div.style.margin = "10px";
+      div.style.borderRadius = "15px";
+      div.innerText = carta.texto;
+      container.appendChild(div);
+    }
+  });
+}
+
+// PROMESSA
+function iniciarPromessa() {
+  const tela = document.getElementById("promessaTela");
+  tela.style.display = "flex";
+  tela.innerHTML = "";
+
+  const frases = [
+    "À minha amada",
+    "meu sonho realizado,",
+    "minha amiga, minha companheira, minha fortaleza.",
+    "dona do meu coração.",
+    "À você, todo o meu amor, sempre.",
+    "nunca vou esquecer dos nossos sonhos..",
+    "nuca vou esquecer do sonho do shopping",
+    "do sonho do apartamento",
+    "você é minha cura e não desistirei de ti nunca..",
+    "Porque você é o amor da minha vida. 💍✨"
+  ];
+
+  frases.forEach((texto, index) => {
+    const p = document.createElement("div");
+    p.className = "frase";
+    p.innerText = texto;
+    tela.appendChild(p);
+
+    setTimeout(() => {
+      p.classList.add("aparecer");
+    }, index * 2500);
+  });
+
+  setTimeout(() => {
+    const btn = document.createElement("button");
+    btn.innerText = "Voltar 💖";
+    btn.className = "fecharPromessa";
+    btn.onclick = () => tela.style.display = "none";
+    tela.appendChild(btn);
+  }, frases.length * 2500);
+}
+
+</script>
+
+</body>
+</html>
